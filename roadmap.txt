@@ -1,0 +1,39 @@
+Goals:
+
+- implement Scene class (100% done)
+- implement Sprite class (100% done)
+	- implement drawing functions (100% done)
+	- implement collision functions (100% done)
+	- implement motion functions (100% done)
+- implement sound class (looping music done)
+- implement virtual joystick (100%))
+- implement keyboard array (100% done)
+- block class made (100%)
+
+
+
+
+
+
+Components:
+	Kitty.java - Title Screen
+	Demo.java - demonstration
+	Scene.java - Inherits awt.Canvas, and implements functions needed to define the scene
+	Sprite.java - Sprite class that has the simpleGame functions
+	Sound.java - implements the functions for simpleGame.js's sound functions - written by 
+	Joystick.java - implements Virtual Joystick
+	Keyboard functions (in Scene.java)
+	
+New Components:
+	Level.java (inherits Scene) - a Scene that tracks movement in relation to its boundaries
+	Background.java - Special sprite that can be assigned movement based on Level's position
+	Block.java - Sprite whose position is based on worldPos, with collision mechanisms to prevent MovingSprite from crossing
+	TiledBackground.java - accepts an array of sprites
+	//MovingSprite - Sprite who cannot cross blocks - nevermind no sprites can cross blocks
+
+12/5/17 - BIG CHANGE! The Joystick doesn't really need to be added above the Demo level. Since the programmer shouldbe 
+programming at the level of Demo.java, which inherits scene, I've modified it so that it can be implemented at that level. 
+This way other mouse functions might work later.
+
+Also, I added my last game so that everything is testable. I also made a background class, and a "block" class. Offssets now work,
+and I ebelieve the solution was more elegant than Tyler's code.
